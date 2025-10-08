@@ -298,25 +298,22 @@ ul {
     position: relative;
 }
 .services .container .box:hover img {
-    transform: translate(50%, -60%);
+    transform: translate(0, -20%);
 }
 .services .box .image {
     position: absolute;
-    width: 180px;
-    height: 180px;
-    display: inline-block;
+    width: 160px;
+    height: 160px;
     background-color: var(--main-color);
     border-radius: 50%;
-    top: -90px;
-    right: -90px;
+    top: -80px;
+    right: -80px;
     z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .services .box img {
-    max-width: 86px;
-    top: 50%;
-    right: 50%;
-    transform: translate(50%, -50%);
-    position: absolute;
     transition: var(--main-transition);
 }
 .services .box .text h2 {
@@ -349,14 +346,24 @@ ul {
 /* End services */
 /* Start about us */
 .about-us {
-    padding-bottom: var(--main-padding-bottom);
+    margin-bottom: 100px;
     position: relative;
+    padding: 80px 0;
+}
+.about-us::before {
+    content: "";
+    position: absolute;
+    top: 0;
     right: 0;
+    width: 65%;
+    height: 100%;
+    z-index: -1;
+    background-color: var(--background-color);
+    border-top-left-radius: 500px;
+    border-bottom-left-radius: 500px;
 }
 .about-us .container {
     display: flex;
-    margin-right: 0;
-    padding-right: 0;
 }
 .about-us .questions-section {
     background-color: var(--main-color);
@@ -557,7 +564,6 @@ ul {
 /* End courses */
 /* Start Facts Section */
 .facts-section {
-    padding-top: var(--main-padding-top);
     padding-bottom: var(--main-padding-bottom);
     margin-bottom: 300px;
 }
@@ -999,6 +1005,7 @@ ul {
     position: relative;
     top: 50px;
     text-align: center;
+    overflow: hidden;
 }
 .contact-us .contact::before {
     content: "";
